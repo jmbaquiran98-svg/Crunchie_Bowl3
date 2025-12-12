@@ -1,0 +1,164 @@
+
+
+* {
+    font-family: 'kumbh sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    color: #744b0a;
+    text-align: center;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-position: right;
+    overflow: hidden;
+}
+
+.wr {
+    box-sizing: border-box;
+    background-color: wheat;
+    height: 100vh;
+    width: max(40%, 50px);
+    border-radius:  0 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 0.65em 3em;
+    background-color: #eb9813;
+    text-transform: uppercase;
+    transition: all 150ms ease;
+    text-decoration: none;
+}
+
+#Pop {
+    color: wheat;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+form {
+    width: max(400px, 100%);
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+form > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+form label {
+    flex-shrink: 0;
+    height: 50px;
+    width: 50px;
+    background-color:#C28014 ;
+    fill: white;
+    color:white ;
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input {
+    box-sizing: border-box;
+    flex-grow: 1;
+    min-width: 0;
+    max-width: 12rem;
+    height: 50px;
+    font:inherit ;
+    padding: 1px;
+    border-radius: 0 10px 10px 0;
+    border: 2px solid #eee7dc ;
+    background-color:#eee7dc ;
+    transition: 150ms ease;
+}
+
+form input:hover {
+    background-color: #C28014;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #744b0a;
+}
+
+div:has(input:focus) > label{
+    background-color: #c7800e;
+}
+
+form input::placeholder{
+    color: #503308;
+    opacity: 1;
+    font-weight: 400;
+}
+
+form button {
+    margin-top: 10px;
+    border: none;
+    border-radius: 1000px;
+    padding: 0.85em 4em;
+    background-color: #eb9813;
+    color: #493008 ;
+    font: inherit;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 150ms ease;
+}
+form button:hover {
+    background-color: #c27800;
+    transition: all 150ms ease;
+}
+form button:focus {
+    outline: none;
+    background-color: #ffa007;
+}
+a { 
+    text-decoration: none;
+    color: #C28014;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+@media(max-width: 1100px){
+    .wrapper {
+        width: min(600px,100%);
+        border-radius: 0;
+    }
+}
+
+form div.incorrect label{
+    background-color: #e94b5d;
+}
+form div.incorrect input{
+    border-color: #e94b5d;
+}
+#error-message{
+    color: #e94b5d;
+}
